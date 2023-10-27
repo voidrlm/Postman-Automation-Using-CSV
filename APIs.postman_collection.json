@@ -42,5 +42,27 @@
         ]
       }
     }
+  ],
+  "variable": [
+    {
+      "key": "request_parameter",
+      "value": "{{request_parameter}}",
+      "type": "string"
+    },
+    {
+      "key": "end_point",
+      "value": "{{end_point}}",
+      "type": "string"
+    },
+    {
+      "key": "use_case",
+      "value": "{{use_case}}",
+      "type": "string"
+    },
+    {
+      "key": "baseURL",
+      "value": "",
+      "type": "string"
+    }
   ]
 }
