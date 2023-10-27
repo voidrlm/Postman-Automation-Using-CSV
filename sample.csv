@@ -1,4 +1,6 @@
-request_parameter,end_point,use_case
-,,
-,,
-,,
+request_parameter,end_point,use_case,request_type
+"{
+    ""email"": ""eve.holt@reqres.in"",
+    ""password"": ""cityslicka""
+}",api/login,Login Test,POST
+{},api/users?page=2,Get Users,GET
