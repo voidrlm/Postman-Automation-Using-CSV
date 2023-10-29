@@ -9,10 +9,25 @@
     {
       "name": "dev",
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{{request_parameter}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
-          "raw": ""
+          "raw": "{{baseURL}}/{{end_point}}",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "{{end_point}}"
+          ]
         }
       },
       "response": []
@@ -62,7 +77,12 @@
     },
     {
       "key": "baseURL",
-      "value": "",
+      "value": "https://reqres.in",
+      "type": "string"
+    },
+    {
+      "key": "request_type",
+      "value": "{{request_type}}",
       "type": "string"
     }
   ]
