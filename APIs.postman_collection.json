@@ -34,7 +34,7 @@
       "script": {
         "type": "text/javascript",
         "exec": [
-          "pm.test(\"Status code is 200\", function () {",
+          "pm.test(pm.variables.get(\"request_type\")+\" Method: \" +\"Status code is 200\", function () {",
           "    pm.response.to.have.status(200);",
           "});",
           "pm.test(\"Response time is less than 5000ms\", function () {",
