@@ -55,10 +55,15 @@
           "pm.test(\"Response time is less than 5000ms\", function () {",
           "    pm.expect(pm.response.responseTime).to.be.below(5000);",
           "});",
-          "pm.test(\"Response is not empty\", function () {",
+          "let test_parameter = JSON.parse(pm.variables.get(\"test_parameter\"));",
+          "",
+          "if(test_parameter.checkIfResponseEmpty){",
+          "    pm.test(\"Response is not empty\", function () {",
           "    pm.response.to.be.ok;",
           "    pm.response.to.have.body; ",
           "});",
+          "}",
+          "",
           ""
         ]
       }
@@ -88,6 +93,11 @@
     {
       "key": "request_type",
       "value": "{{request_type}}",
+      "type": "string"
+    },
+    {
+      "key": "test_parameter",
+      "value": "{{test_parameter}}",
       "type": "string"
     }
   ]
